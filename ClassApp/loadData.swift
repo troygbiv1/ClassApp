@@ -30,12 +30,3 @@ func load<T: Decodable>(_ filename: String, as type: T.Type = T.self) -> T {
         fatalError("Couldn't parse \(filename) as \(T.self):\n\(error)")
     }
 }
-
-struct RandomStudent {
-    
-    func randomStudent(classString: String) -> String {
-        let classRoom = classRoomData[classString]
-        let randomStudent = classRoom!.students.randomElement()!
-        return randomStudent
-    }
-}

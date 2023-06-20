@@ -7,15 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		055558FC2A421869009A8B87 /* ContentViewFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055558FB2A421869009A8B87 /* ContentViewFunctions.swift */; };
+		055558FE2A42191D009A8B87 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055558FD2A42191D009A8B87 /* ContentView.swift */; };
+		055559002A421973009A8B87 /* ContentViewStructuresandClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055558FF2A421973009A8B87 /* ContentViewStructuresandClasses.swift */; };
 		05910D412A40C7BF0018FF67 /* ClassAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05910D402A40C7BF0018FF67 /* ClassAppTests.swift */; };
 		05910D4B2A40C7BF0018FF67 /* ClassAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05910D4A2A40C7BF0018FF67 /* ClassAppUITests.swift */; };
 		05910D4D2A40C7BF0018FF67 /* ClassAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05910D4C2A40C7BF0018FF67 /* ClassAppUITestsLaunchTests.swift */; };
-		05910D632A40C7E60018FF67 /* ClassRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05910D5A2A40C7E60018FF67 /* ClassRoom.swift */; };
 		05910D642A40C7E60018FF67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05910D5B2A40C7E60018FF67 /* Assets.xcassets */; };
 		05910D652A40C7E60018FF67 /* ClassAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05910D5C2A40C7E60018FF67 /* ClassAppApp.swift */; };
-		05910D662A40C7E60018FF67 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05910D5D2A40C7E60018FF67 /* ModelData.swift */; };
-		05910D672A40C7E60018FF67 /* ScheduleStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05910D5E2A40C7E60018FF67 /* ScheduleStorage.swift */; };
-		05910D682A40C7E60018FF67 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05910D5F2A40C7E60018FF67 /* ContentView.swift */; };
+		05910D662A40C7E60018FF67 /* loadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05910D5D2A40C7E60018FF67 /* loadData.swift */; };
+		05910D672A40C7E60018FF67 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05910D5E2A40C7E60018FF67 /* Schedule.swift */; };
 		05910D692A40C7E60018FF67 /* Preview Content in Resources */ = {isa = PBXBuildFile; fileRef = 05910D602A40C7E60018FF67 /* Preview Content */; };
 		05910D6A2A40C7E60018FF67 /* classRoomData.json in Resources */ = {isa = PBXBuildFile; fileRef = 05910D612A40C7E60018FF67 /* classRoomData.json */; };
 /* End PBXBuildFile section */
@@ -38,6 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		055558FB2A421869009A8B87 /* ContentViewFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewFunctions.swift; sourceTree = "<group>"; };
+		055558FD2A42191D009A8B87 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		055558FF2A421973009A8B87 /* ContentViewStructuresandClasses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewStructuresandClasses.swift; sourceTree = "<group>"; };
 		05910D2C2A40C7BE0018FF67 /* ClassApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClassApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05910D3C2A40C7BF0018FF67 /* ClassAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClassAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		05910D402A40C7BF0018FF67 /* ClassAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassAppTests.swift; sourceTree = "<group>"; };
@@ -45,12 +49,10 @@
 		05910D4A2A40C7BF0018FF67 /* ClassAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassAppUITests.swift; sourceTree = "<group>"; };
 		05910D4C2A40C7BF0018FF67 /* ClassAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		05910D592A40C7E60018FF67 /* ClassApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ClassApp-Bridging-Header.h"; sourceTree = "<group>"; };
-		05910D5A2A40C7E60018FF67 /* ClassRoom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassRoom.swift; sourceTree = "<group>"; };
 		05910D5B2A40C7E60018FF67 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		05910D5C2A40C7E60018FF67 /* ClassAppApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassAppApp.swift; sourceTree = "<group>"; };
-		05910D5D2A40C7E60018FF67 /* ModelData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
-		05910D5E2A40C7E60018FF67 /* ScheduleStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleStorage.swift; sourceTree = "<group>"; };
-		05910D5F2A40C7E60018FF67 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		05910D5D2A40C7E60018FF67 /* loadData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loadData.swift; sourceTree = "<group>"; };
+		05910D5E2A40C7E60018FF67 /* Schedule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
 		05910D602A40C7E60018FF67 /* Preview Content */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Preview Content"; sourceTree = "<group>"; };
 		05910D612A40C7E60018FF67 /* classRoomData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = classRoomData.json; sourceTree = "<group>"; };
 		05910D622A40C7E60018FF67 /* ClassApp.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = ClassApp.entitlements; sourceTree = "<group>"; };
@@ -81,6 +83,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		055559022A42199F009A8B87 /* ContentView */ = {
+			isa = PBXGroup;
+			children = (
+				055558FD2A42191D009A8B87 /* ContentView.swift */,
+				055558FF2A421973009A8B87 /* ContentViewStructuresandClasses.swift */,
+				055558FB2A421869009A8B87 /* ContentViewFunctions.swift */,
+			);
+			path = ContentView;
+			sourceTree = "<group>";
+		};
 		05910D232A40C7BE0018FF67 = {
 			isa = PBXGroup;
 			children = (
@@ -104,15 +116,14 @@
 		05910D2E2A40C7BE0018FF67 /* ClassApp */ = {
 			isa = PBXGroup;
 			children = (
+				055559022A42199F009A8B87 /* ContentView */,
 				05910D5B2A40C7E60018FF67 /* Assets.xcassets */,
 				05910D622A40C7E60018FF67 /* ClassApp.entitlements */,
 				05910D5C2A40C7E60018FF67 /* ClassAppApp.swift */,
-				05910D5A2A40C7E60018FF67 /* ClassRoom.swift */,
 				05910D612A40C7E60018FF67 /* classRoomData.json */,
-				05910D5F2A40C7E60018FF67 /* ContentView.swift */,
-				05910D5D2A40C7E60018FF67 /* ModelData.swift */,
+				05910D5D2A40C7E60018FF67 /* loadData.swift */,
 				05910D602A40C7E60018FF67 /* Preview Content */,
-				05910D5E2A40C7E60018FF67 /* ScheduleStorage.swift */,
+				05910D5E2A40C7E60018FF67 /* Schedule.swift */,
 				05910D592A40C7E60018FF67 /* ClassApp-Bridging-Header.h */,
 			);
 			path = ClassApp;
@@ -268,10 +279,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				05910D652A40C7E60018FF67 /* ClassAppApp.swift in Sources */,
-				05910D682A40C7E60018FF67 /* ContentView.swift in Sources */,
-				05910D632A40C7E60018FF67 /* ClassRoom.swift in Sources */,
-				05910D672A40C7E60018FF67 /* ScheduleStorage.swift in Sources */,
-				05910D662A40C7E60018FF67 /* ModelData.swift in Sources */,
+				055559002A421973009A8B87 /* ContentViewStructuresandClasses.swift in Sources */,
+				055558FC2A421869009A8B87 /* ContentViewFunctions.swift in Sources */,
+				055558FE2A42191D009A8B87 /* ContentView.swift in Sources */,
+				05910D672A40C7E60018FF67 /* Schedule.swift in Sources */,
+				05910D662A40C7E60018FF67 /* loadData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
