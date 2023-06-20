@@ -11,6 +11,7 @@ struct ContentView: View {
     let scheduleStorage = ScheduleStorage()
     @State private var nextClassInfo: (status: String, schedule: Schedule, timeUntil: String, color: Color, color2: Color) = ("", Schedule.placeholder, "00:00:00", Color(red: 33/255, green: 117/255, blue: 155/255), Color(red: 33/255, green: 117/255, blue: 155/255))
     
+    
     func fetchNextClassInfo() {
         // Call the function that returns the Block object
         let nextClass = self.scheduleStorage.loadNextClass()
@@ -27,7 +28,7 @@ struct ContentView: View {
         
         var color = nextClassInfo.color
         var color2 = nextClassInfo.color
-
+        
         
         if status == "coming up" {
             color = Color(red: 144/255, green: 238/255, blue: 144/255)
@@ -45,34 +46,26 @@ struct ContentView: View {
         
         nextClassInfo = (status, schedule, timerString, color, color2)
         
-
+        
     }
     
     @State private var showStudent = false
     @State private var studentRandom = ""
+    @State private var buttonEnabled = false
     
     var body: some View {
         VStack(spacing:25) {
             Text(studentRandom)
-                           .font(.system(size: 40))
-                           .foregroundColor(.white)
-                           .padding(0.0)
-                           .frame(width: 300, height: 55)
-                           .background(RoundedRectangle(cornerRadius: 30).foregroundColor(nextClassInfo.color2))
-                           .opacity(showStudent ? 1 : 0)
+                .font(.system(size: 40))
+                .foregroundColor(.white)
+                .padding(0.0)
+                .frame(width: 300, height: 55)
+                .background(RoundedRectangle(cornerRadius: 30).foregroundColor(nextClassInfo.color2))
+                .opacity(showStudent ? 1 : 0)
             Button(action: {
-                if nextClassInfo.status == "on going"
-                {
-                    self.disabled(false)
-                }
-                else {
-                    self.disabled(true)
-                }
                 let randomStudent = RandomStudent()
                 studentRandom = randomStudent.randomStudent(classString: nextClassInfo.schedule.name)
                 showStudent = true
-                
-                
             }) {
                 RoundedRectangle(cornerRadius: 35)
                     .frame(width: 300, height: 300)
@@ -97,20 +90,20 @@ struct ContentView: View {
                         .font(.system(size:40))
                         .foregroundColor(.white)
                 )
-        }
-        .padding(.top, -45.0)
-        .onAppear(){
-            Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
-                fetchNextClassInfo()
+                .onAppear(){
+                    Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
+                        fetchNextClassInfo()
+                        }
+                    }
                 }
+        .disabled(!buttonEnabled)
+        .padding(.top, -45.0)
         }
-    }
 }
 
     
 struct ContentView_Previews: PreviewProvider {
-        static var previews: some View {
-            ContentView()
-        }
+    static var previews: some View {
+        ContentView()
+    }
 }
-

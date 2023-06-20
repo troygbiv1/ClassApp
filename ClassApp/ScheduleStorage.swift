@@ -36,7 +36,7 @@ struct ScheduleStorage {
         Schedule(name: "7.3", dayOfWeek: 3, startTime: "08:00:00", endTime: "08:50:00"),
         Schedule(name: "8.3", dayOfWeek: 3, startTime: "09:55:00", endTime: "10:45:00"),
         Schedule(name: "7.2", dayOfWeek: 3, startTime: "10:45:00", endTime: "11:35:00"),
-        Schedule(name: "7.1", dayOfWeek: 3, startTime: "13:30:00", endTime: "14:20:00"),
+        Schedule(name: "7.1", dayOfWeek: 3, startTime: "13:30:00", endTime: "17:13:00"),
     ]
     
     func loadNextClass() -> Block? {
