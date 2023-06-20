@@ -7,7 +7,7 @@
 
 import Foundation
 
-var classRoomData: [String: ClassInfo] = load("classRoomData.json")
+var classRoomData: [String: ClassInfoDecoder] = load("classRoomData.json")
 
 func load<T: Decodable>(_ filename: String, as type: T.Type = T.self) -> T {
     let data: Data
