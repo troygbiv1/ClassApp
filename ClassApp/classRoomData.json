@@ -1,0 +1,24 @@
+{
+  "7.1": {
+    "numberOfStudents": 21,
+    "students": [
+      "Pauldee", "Puth", "Joseph", "Benjamin", "PhuPhae (poo-pa)", "Fynn", "Pinto", "Win", "Matthew", "Mathy(mathis)", "Tim", "Jojo", "Gift", "Elina", "Bebee", "Pakamon", "Arpo", "Yuri", "Pinn", "Baimon (bi-mawn)", "Khawhom"
+    ],
+    "classAverage": 73
+  },
+  "7.2": {
+    "numberOfStudents": 22,
+    "students": [
+      "Art", "Theo", "Jireh", "Benny", "DC", "David", "Sora", "Jedi", "Andy", "Motto", "Yaya", "Keia", "Koy", "Kwan", "Tyra", "Tonnaow", "Mami", "Hannah", "Janine", "Sakura", "Pitta", "Niu Niu"
+    ],
+    "classAverage": 80
+  },
+  "7.3": {
+    "numberOfStudents": 21,
+    "students": [
+      "Bhumi", "Tonnam", "Arti", "Jo", "Pun", "Bungy", "Reki", "Ryo", "Nut", "Peach", "Baifern", "Tanay", "Proud", "N/A", "Alice", "Khumpa", "Fleur", "Hana", "Yajean", "Cake", "Prada"
+    ],
+    "classAverage": 88
+  }
+}
+
