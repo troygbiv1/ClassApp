@@ -7,13 +7,10 @@
 
 import SwiftUI
 
-private var showStudent = false
-private var studentRandom = ""
-
-func buttonFunc(nextClassName: String) {
+func buttonFunc(nextClassName: String) -> String {
     let randomStudent = RandomStudent()
-    studentRandom = randomStudent.randomStudent(classString: nextClassName)
-    showStudent = true
+    let studentRandom = randomStudent.randomStudent(classString: nextClassName)
+    return studentRandom
 }
 
 func fetchNextClassInfo() -> ClassInfo {
@@ -45,7 +42,7 @@ func fetchNextClassInfo() -> ClassInfo {
         timerString = "--:--"
     } else {
         color = Color(red: 135/255, green: 206/255, blue: 250/255)
-        color2 = Color(red: 0/255, green: 0/255, blue: 139)
+        color2 = Color(red: 0/255, green: 0/255, blue: 139/255)
     }
     
     
@@ -55,11 +52,11 @@ func fetchNextClassInfo() -> ClassInfo {
 
 
 struct ContentView: View {
-    @State var studentRandom = ""
-    @State var buttonDisabled = true
     
+    @State private var showStudent = false
+    @State private var studentRandom = ""
+    @State var buttonDisabled = true
     @State var nextClassInfo = fetchNextClassInfo()
-
     
     var body: some View {
         VStack(spacing:25) {
@@ -71,7 +68,8 @@ struct ContentView: View {
                 .background(RoundedRectangle(cornerRadius: 30).foregroundColor(nextClassInfo.color2))
                 .opacity(showStudent ? 1 : 0)
             Button(action: {
-                buttonFunc(nextClassName: nextClassInfo.schedule.name)
+                studentRandom = buttonFunc(nextClassName: nextClassInfo.schedule.name)
+                showStudent = true
             })
                    {
                 RoundedRectangle(cornerRadius: 35)
@@ -101,9 +99,10 @@ struct ContentView: View {
                 .onAppear(){
                     var statuesUpdate = ""
                     Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
-                        let nextClassInfo = fetchNextClassInfo()
+                        nextClassInfo = fetchNextClassInfo()
                         let nextClassInfo2 = fetchNextClassInfo()
                         if statuesUpdate != nextClassInfo2.status {
+                            showStudent = false
                             if nextClassInfo2.status == "on going" {
                                 statuesUpdate = nextClassInfo2.status
                                 buttonDisabled = false
